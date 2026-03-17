@@ -18,7 +18,7 @@ export default function Home() {
   useEffect(() => {
     const handleScroll = () => {
       const sections = ["home", "products", "about", "contact"];
-      const scrollPosition = window.scrollY + 100; // Offset for navbar height
+      const scrollPosition = window.scrollY + 100;
 
       for (const section of sections) {
         const element = document.getElementById(section);

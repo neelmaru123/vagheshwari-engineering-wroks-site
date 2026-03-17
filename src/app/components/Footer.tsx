@@ -93,7 +93,7 @@ const Footer = () => {
                   href="#products"
                   className="hover:text-white transition-colors"
                 >
-                  Hydraulic Brick Machines
+                  Fully Automatic Brick Making Machines
                 </a>
               </li>
               <li>
@@ -101,7 +101,7 @@ const Footer = () => {
                   href="#products"
                   className="hover:text-white transition-colors"
                 >
-                  Automatic Production Lines
+                  Semi Automatic Brick Making Machines
                 </a>
               </li>
               <li>
@@ -109,7 +109,7 @@ const Footer = () => {
                   href="#products"
                   className="hover:text-white transition-colors"
                 >
-                  Mobile Machines
+                  Claybricks Making Machines
                 </a>
               </li>
               <li>
@@ -117,7 +117,7 @@ const Footer = () => {
                   href="#products"
                   className="hover:text-white transition-colors"
                 >
-                  Auxiliary Equipment
+                  Paver Block Making Machines
                 </a>
               </li>
             </ul>

@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Label } from "./ui/label";
-import { Skeleton } from "./ui/skeleton";
 import { Phone, Mail, MapPin } from "lucide-react";
 import { useToast } from "../../hooks/use-toast";
 
