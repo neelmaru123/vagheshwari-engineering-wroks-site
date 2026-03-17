@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start"
   },
-  "dependencies": {},
+  "dependencies": {
+    "next": "15.5.4"
+  },
   "devDependencies": {
     "@eslint/js": "^9.9.0",
     "@tailwindcss/typography": "^0.5.15",
