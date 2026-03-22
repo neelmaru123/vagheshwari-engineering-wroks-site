@@ -1,6 +1,4 @@
-import { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
+const nextConfig = {
   output: "export", // for static site — fast loading = better SEO
   trailingSlash: true,
   images: {
