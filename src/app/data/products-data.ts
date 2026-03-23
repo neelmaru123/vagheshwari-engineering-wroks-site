@@ -326,6 +326,8 @@ export const productCategories = [
       "/uploads/3Dmodels/fully_automatic_machine.png",
       "/uploads/Fully-Automatic-Fly-Ash-Brick-Making-Machine.webp",
       "/uploads/937ba39a-07c1-4f4a-9406-12c9f61034cd.png",
+      "/uploads/block_making_machine_2.jpeg",
+      "/uploads/block_making_machine_3.jpeg",
     ],
   },
 
@@ -411,7 +413,10 @@ export const productCategories = [
         ],
       },
     ],
-    images: ["/uploads/85c9a281-beb6-49b1-bd1a-c4fa90f2dbd1.png"],
+    images: [
+      "/uploads/concrete-vibrator-table-500x500.webp",
+      "/uploads/85c9a281-beb6-49b1-bd1a-c4fa90f2dbd1.png",
+    ],
   },
   {
     id: "7",
