@@ -40,7 +40,7 @@ const ProductDetailsClient = ({ product }: ProductDetailsClientProps) => {
       />
 
       <main className="flex-grow pt-16 md:pt-20">
-        <div className="container mx-auto px-4 py-8">
+        <div className="container mx-auto px-4 py-12 md:py-8">
           <Button
             onClick={() => router.push("/")}
             variant="outline"

@@ -6,6 +6,7 @@ import {
   Phone,
   MapPin,
 } from "lucide-react";
+import Image from "next/image";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -15,9 +16,15 @@ const Footer = () => {
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           <div className="text-center md:text-left">
-            <h3 className="text-xl font-bold text-white mb-4">
-              <span className="text-red-500">Vageshwari</span> Engineering Works
-            </h3>
+            <div className="mb-6 flex justify-center md:justify-start">
+              <Image
+                src="/uploads/logo.png"
+                alt="Vageshwari Engineering Works"
+                width={240}
+                height={80}
+                className="h-24 md:h-16 w-auto object-contain"
+              />
+            </div>
             <p className="mb-4">
               Manufacturer of high-quality hydraulic brick making machines and
               equipment. Trusted by businesses across India for reliable,
