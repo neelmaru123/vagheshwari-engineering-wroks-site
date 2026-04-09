@@ -24,7 +24,6 @@ interface ProductDetailsClientProps {
 
 const ProductDetailsClient = ({ product }: ProductDetailsClientProps) => {
   const router = useRouter();
-  const [activeSection, setActiveSection] = useState("products");
   const [activeImage, setActiveImage] = useState(0);
 
   useEffect(() => {
@@ -33,11 +32,7 @@ const ProductDetailsClient = ({ product }: ProductDetailsClientProps) => {
 
   return (
     <>
-      <Navbar
-        activeSection={activeSection}
-        setActiveSection={setActiveSection}
-        isProduct={true}
-      />
+      <Navbar isProduct={true} />
 
       <main className="flex-grow pt-16 md:pt-20">
         <div className="container mx-auto px-4 py-12 md:py-8">

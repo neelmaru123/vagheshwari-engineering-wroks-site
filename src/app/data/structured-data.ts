@@ -1,10 +1,12 @@
 export const homeStructuredData = {
   "@context": "https://schema.org",
-  "@type": "Organization",
+  "@type": ["Organization", "Manufacturer", "LocalBusiness"],
   "name": "Vageshwari Engineering Works",
-  "url": "https://vageshwari-engineering.com",
-  "logo": "https://vageshwari-engineering.com/logo.png",
+  "url": "https://www.vagheshwariengineering.com",
+  "logo": "https://www.vagheshwariengineering.com/logo.png",
   "description": "Leading manufacturer of hydraulic brick making machines, fly ash brick machines, automatic production lines & vibration tables in India.",
+  "foundingDate": "1995",
+  "priceRange": "$$",
   "address": {
     "@type": "PostalAddress",
     "addressCountry": "IN",

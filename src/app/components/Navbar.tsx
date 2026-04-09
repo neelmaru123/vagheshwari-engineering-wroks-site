@@ -1,18 +1,15 @@
+"use client";
+
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
 
 interface NavbarProps {
-  activeSection: string;
-  setActiveSection: (section: string) => void;
   isProduct?: boolean;
 }
 
-const Navbar = ({
-  activeSection,
-  setActiveSection,
-  isProduct,
-}: NavbarProps) => {
+const Navbar = ({ isProduct }: NavbarProps = {}) => {
+  const [activeSection, setActiveSection] = useState("home");
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -20,7 +17,6 @@ const Navbar = ({
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
 
-      // Update active section based on scroll position
       const sections = document.querySelectorAll("section[id]");
       let currentSection = "home";
 
@@ -40,7 +36,7 @@ const Navbar = ({
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [setActiveSection]);
+  }, []);
 
   const handleNavClick = (sectionId: string) => {
     setActiveSection(sectionId);
@@ -60,12 +56,10 @@ const Navbar = ({
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         isScrolled || isProduct
           ? "bg-white shadow-md py-2"
-          : " bg-blue-50 py-2 md:py-4"
+          : "bg-blue-50 py-2 md:py-4"
       }`}
     >
-      <div
-        className={`container mx-auto px-4 flex items-center justify-between`}
-      >
+      <div className="container mx-auto px-4 flex items-center justify-between">
         <div className="flex items-center">
           <Image
             src="/uploads/logo.png"
@@ -78,7 +72,7 @@ const Navbar = ({
         </div>
 
         {/* Desktop Navigation */}
-        {isProduct ?? (
+        {!isProduct && (
           <nav className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
               <button
@@ -95,7 +89,7 @@ const Navbar = ({
         )}
 
         {/* Mobile Menu Button */}
-        {isProduct ?? (
+        {!isProduct && (
           <button
             className="md:hidden text-gray-800 focus:outline-none p-2"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}

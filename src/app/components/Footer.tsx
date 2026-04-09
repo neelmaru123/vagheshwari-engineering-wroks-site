@@ -7,6 +7,7 @@ import {
   MapPin,
 } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -64,30 +65,24 @@ const Footer = () => {
             </h4>
             <ul className="space-y-3">
               <li>
-                <a href="#home" className="hover:text-white transition-colors">
+                <Link href="/#home" className="hover:text-white transition-colors">
                   Home
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#products"
-                  className="hover:text-white transition-colors"
-                >
+                <Link href="/#products" className="hover:text-white transition-colors">
                   Products
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#about" className="hover:text-white transition-colors">
+                <Link href="/#about" className="hover:text-white transition-colors">
                   About Us
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#contact"
-                  className="hover:text-white transition-colors"
-                >
+                <Link href="/#contact" className="hover:text-white transition-colors">
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -96,36 +91,24 @@ const Footer = () => {
             <h4 className="text-lg font-semibold text-white mb-4">Products</h4>
             <ul className="space-y-3">
               <li>
-                <a
-                  href="#products"
-                  className="hover:text-white transition-colors"
-                >
+                <Link href="/#products" className="hover:text-white transition-colors">
                   Fully Automatic Brick Making Machines
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#products"
-                  className="hover:text-white transition-colors"
-                >
+                <Link href="/#products" className="hover:text-white transition-colors">
                   Semi Automatic Brick Making Machines
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#products"
-                  className="hover:text-white transition-colors"
-                >
+                <Link href="/#products" className="hover:text-white transition-colors">
                   Claybricks Making Machines
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#products"
-                  className="hover:text-white transition-colors"
-                >
+                <Link href="/#products" className="hover:text-white transition-colors">
                   Paver Block Making Machines
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import { Card, CardContent } from "./ui/card";
 import { AspectRatio } from "./ui/aspect-ratio";
@@ -8,14 +6,6 @@ import { productCategories } from "../data/products-data";
 import Link from "next/link";
 
 const ProductsSection = () => {
-  const handleViewCatalogue = () => {
-    window.open(
-      "/uploads/Shree_Vagheshvaree_Engineering_Works.pdf",
-      "_blank",
-      "width=1200,height=800,zoom=50",
-    );
-  };
-
   return (
     <section className="py-12 md:py-16 bg-gray-50">
       <div className="container mx-auto px-4">
@@ -56,22 +46,6 @@ const ProductsSection = () => {
                       {category.description}
                     </p>
 
-                    {/* {category.variants && category.variants.length > 0 ? (
-                    <div className="mb-3">
-                      <div className="text-xs text-gray-500">
-                        Variants: {category.variants.length}
-                      </div>
-                      <div className="text-sm text-gray-700">
-                        From:{" "}
-                        {category.variants[0].price ?? "Contact for price"}
-                      </div>
-                    </div>
-                  ) : category.items ? (
-                    <div className="mb-3 text-sm text-gray-700">
-                      Items: {category.items.length}
-                    </div>
-                  ) : null} */}
-
                     <Link href={`/product/${category.id}`}>
                       <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white">
                         View Details
@@ -86,10 +60,12 @@ const ProductsSection = () => {
 
         <div className="flex justify-center items-center">
           <Button
-            onClick={handleViewCatalogue}
+            asChild
             className="mt-10 p-6 text-xl bg-blue-600 hover:bg-blue-700 text-white "
           >
-            View Catalogue
+            <a href="/uploads/Shree_Vagheshvaree_Engineering_Works.pdf" target="_blank" rel="noopener noreferrer">
+              View Catalogue
+            </a>
           </Button>
         </div>
       </div>

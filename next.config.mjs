@@ -1,8 +1,29 @@
+/** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export", // for static site — fast loading = better SEO
   trailingSlash: true,
-  images: {
-    unoptimized: true, // required if using static export
+  async headers() {
+    return [
+      {
+        // Aggressive caching for static assets
+        source: "/_next/image(.*)",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
+        ],
+      },
+      {
+        // Shorter caching for HTML paths
+        source: "/(.*)",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=3600, s-maxage=86400, stale-while-revalidate=86400",
+          },
+        ],
+      },
+    ];
   },
 };
 

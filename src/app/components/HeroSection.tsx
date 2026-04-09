@@ -1,12 +1,9 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Button } from "./ui/button";
 import { ArrowRight } from "lucide-react";
 
 const HeroSection = () => {
-  const scrollToProducts = () => {
-    document.getElementById("products")?.scrollIntoView({ behavior: "smooth" });
-  };
-
   return (
     <section className="relative bg-gradient-to-b from-blue-50 to-white pt-20 md:pt-24 pb-12 md:pb-16">
       <div className="container mx-auto px-4">
@@ -25,22 +22,22 @@ const HeroSection = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-3 md:gap-4 pt-2">
               <Button
-                onClick={scrollToProducts}
+                asChild
                 className="bg-blue-600 hover:bg-blue-700 text-white py-4 md:py-6 px-4 md:px-6 rounded-md w-full sm:w-auto"
               >
-                Explore Products{" "}
-                <ArrowRight className="ml-2 h-4 w-4 md:h-5 md:w-5" />
+                <Link href="#products">
+                  Explore Products{" "}
+                  <ArrowRight className="ml-2 h-4 w-4 md:h-5 md:w-5" />
+                </Link>
               </Button>
               <Button
+                asChild
                 variant="outline"
-                onClick={() =>
-                  document
-                    .getElementById("contact")
-                    ?.scrollIntoView({ behavior: "smooth" })
-                }
                 className="border-blue-600 text-blue-600 hover:bg-blue-50 py-4 md:py-6 px-4 md:px-6 rounded-md w-full sm:w-auto"
               >
-                Contact Us
+                <Link href="#contact">
+                  Contact Us
+                </Link>
               </Button>
             </div>
           </div>
