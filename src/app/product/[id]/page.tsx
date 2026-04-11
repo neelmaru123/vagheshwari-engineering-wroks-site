@@ -88,6 +88,23 @@ export default async function ProductPage({
       product.images && product.images.length > 0
         ? product.images
         : ["/uploads/logo.png"],
+    offers: {
+      "@type": "Offer",
+      priceCurrency: "INR",
+      price: "Contact for Price",
+      priceSpecification: {
+        "@type": "PriceSpecification",
+        priceCurrency: "INR",
+        description: "Contact for Price",
+      },
+      availability: "",
+      seller: {
+        "@type": "Organization",
+        name: "Vageshwari Engineering Works",
+        url: "https://www.vagheshwariengineering.com",
+      },
+      url: `https://www.vagheshwariengineering.com/product/${product.id}`,
+    },
   };
 
   const breadcrumbStructuredData = {
