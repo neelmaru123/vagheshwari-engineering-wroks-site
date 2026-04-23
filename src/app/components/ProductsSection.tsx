@@ -63,7 +63,7 @@ const ProductsSection = () => {
             asChild
             className="mt-10 p-6 text-xl bg-blue-600 hover:bg-blue-700 text-white "
           >
-            <a href="/uploads/Shree_Vagheshvaree_Engineering_Works.pdf" target="_blank" rel="noopener noreferrer">
+            <a href="/uploads/Shree%20Vagheshvaree%20Engineering%20Works.pdf" target="_blank" rel="noopener noreferrer">
               View Catalogue
             </a>
           </Button>

@@ -13,18 +13,18 @@ const WhatsappButton = dynamic(() => import("./components/WhatsappButton").then(
 
 export const metadata: Metadata = {
   title: "Hydraulic Brick Making Machine Manufacturer | Vageshwari Engineering Works",
-  description: "Leading manufacturer of hydraulic brick making machines, fly ash brick machines, automatic production lines & vibration tables. High-quality construction equipment for efficient brick production in India.",
+  description: "Leading manufacturer of hydraulic brick making machines, fly ash brick machines, automatic brick making machines & vibration tables. High-quality construction equipment for efficient brick production in India.",
   keywords: "brick making machine, hydraulic brick machine, fly ash brick machine, automatic brick production machine, vibration table, brick making equipment, concrete block machine, construction machinery",
   openGraph: {
     title: "Hydraulic Brick Making Machine Manufacturer | Vageshwari Engineering Works",
-    description: "Leading manufacturer of hydraulic brick making machines, fly ash brick machines, automatic production lines & vibration tables. High-quality construction equipment for efficient brick production in India.",
+    description: "Leading manufacturer of hydraulic brick making machines, fly ash brick machines, automatic brick making machines & vibration tables. High-quality construction equipment for efficient brick production in India.",
     type: "website",
-    images: [{ url: "/lovable-uploads/dcf8cef5-6848-48d2-ad46-0f38a0064c97.png" }],
+    images: [{ url: "/uploads/dcf8cef5-6848-48d2-ad46-0f38a0064c97.png" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Hydraulic Brick Making Machine Manufacturer | Vageshwari Engineering Works",
-    description: "Leading manufacturer of hydraulic brick making machines, fly ash brick machines, automatic production lines & vibration tables. High-quality construction equipment for efficient brick production in India.",
+    description: "Leading manufacturer of hydraulic brick making machines, fly ash brick machines, automatic brick making machines & vibration tables. High-quality construction equipment for efficient brick production in India.",
     images: ["/lovable-uploads/dcf8cef5-6848-48d2-ad46-0f38a0064c97.png"],
   }
 };
