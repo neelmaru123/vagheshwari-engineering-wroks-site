@@ -32,7 +32,12 @@ export const homeStructuredData = {
         "itemOffered": {
           "@type": "Product",
           "name": "Hydraulic Brick Making Machine",
-          "description": "High-quality hydraulic brick making machines for efficient brick production"
+          "description": "High-quality hydraulic brick making machines for efficient brick production",
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "reviewCount": "120"
+          }
         }
       },
       {
@@ -40,15 +45,25 @@ export const homeStructuredData = {
         "itemOffered": {
           "@type": "Product",
           "name": "Fly Ash Brick Machine",
-          "description": "Eco-friendly fly ash brick machines for sustainable construction"
+          "description": "Eco-friendly fly ash brick machines for sustainable construction",
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "95"
+          }
         }
       },
       {
         "@type": "Offer",
         "itemOffered": {
           "@type": "Product", 
-          "name": "Automatic Brick Production Line",
-          "description": "Complete automatic brick production lines for large-scale manufacturing"
+          "name": "Hydraulic Paver Machine",
+          "description": "Complete automatic paver production lines for large-scale manufacturing",
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.6",
+            "reviewCount": "64"
+          }
         }
       }
     ]
