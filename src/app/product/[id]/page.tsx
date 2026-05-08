@@ -17,14 +17,14 @@ export async function generateMetadata({
   const product = productCategories.find((p: any) => p.id === id);
 
   if (!product) {
-    return { title: "Product Not Found | Vageshwari Engineering Works" };
+    return { title: "Product Not Found | Vagheshwari Engineering Works" };
   }
 
-  const title = `${product.name} | Vageshwari Engineering Works`;
-  const description = product.longDescription ?? product.description;
+  const title = `${product.name} Manufacturer in India | Vagheshwari Engineering Works`;
+  const description = `${product.name} manufacturer and supplier. High-quality bricks making machine for fly ash bricks, clay bricks, and paver blocks in Morbi, Gujarat, India.`;
   const ogImage = product.images?.[0] ?? "/uploads/logo.png";
-  const keywords = `${product.name}, brick making machine, hydraulic machine, construction equipment, ${product.category}`;
-  const canonical = `https://www.vagheshwariengineering.com/product/${product.id}`;
+  const keywords = `${product.name}, bricks making machine manufacturer, fly-ash bricks making machine morbi, hydraulic brick machine, construction equipment manufacturer, ${product.category}, Vagheshwari Engineering`;
+  const canonical = `https://www.vagheshwariengineering.in/product/${product.id}`;
 
   return {
     title,
@@ -70,6 +70,25 @@ export default async function ProductPage({
     );
   }
 
+  const getPriceRange = (category: string) => {
+    switch (category) {
+      case "fully-automatic":
+        return { low: "800000", high: "2500000" };
+      case "semi-automatic":
+        return { low: "300000", high: "800000" };
+      case "clay-machine":
+        return { low: "200000", high: "1200000" };
+      case "auxiliary":
+        return { low: "15000", high: "150000" };
+      case "molds":
+        return { low: "100", high: "2000" };
+      default:
+        return { low: "50000", high: "2000000" };
+    }
+  };
+
+  const { low, high } = getPriceRange(product.category);
+
   const productStructuredData = {
     "@context": "https://schema.org",
     "@type": "Product",
@@ -77,11 +96,11 @@ export default async function ProductPage({
     description: product.longDescription ?? product.description,
     brand: {
       "@type": "Brand",
-      name: "Vageshwari Engineering Works",
+      name: "Vagheshwari Engineering Works",
     },
     manufacturer: {
       "@type": "Organization",
-      name: "Vageshwari Engineering Works",
+      name: "Vagheshwari Engineering Works",
     },
     category: "Industrial Machinery",
     image:
@@ -89,21 +108,18 @@ export default async function ProductPage({
         ? product.images
         : ["/uploads/logo.png"],
     offers: {
-      "@type": "Offer",
+      "@type": "AggregateOffer",
       priceCurrency: "INR",
-      price: "Contact for Price",
-      priceSpecification: {
-        "@type": "PriceSpecification",
-        priceCurrency: "INR",
-        description: "Contact for Price",
-      },
-      availability: "",
+      lowPrice: low,
+      highPrice: high,
+      offerCount: "1",
+      availability: "https://schema.org/InStock",
       seller: {
         "@type": "Organization",
-        name: "Vageshwari Engineering Works",
-        url: "https://www.vagheshwariengineering.com",
+        name: "Vagheshwari Engineering Works",
+        url: "https://www.vagheshwariengineering.in",
       },
-      url: `https://www.vagheshwariengineering.com/product/${product.id}`,
+      url: `https://www.vagheshwariengineering.in/product/${product.id}`,
     },
   };
 
@@ -115,13 +131,13 @@ export default async function ProductPage({
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "https://www.vagheshwariengineering.com",
+        item: "https://www.vagheshwariengineering.in",
       },
       {
         "@type": "ListItem",
         position: 2,
         name: product.name,
-        item: `https://www.vagheshwariengineering.com/product/${product.id}`,
+        item: `https://www.vagheshwariengineering.in/product/${product.id}`,
       },
     ],
   };
@@ -130,14 +146,17 @@ export default async function ProductPage({
     <div className="min-h-screen w-full flex flex-col bg-background overflow-x-hidden">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(productStructuredData) }}
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(productStructuredData),
+        }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbStructuredData) }}
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbStructuredData),
+        }}
       />
       <ProductDetailsClient product={product} />
     </div>
   );
 }
-

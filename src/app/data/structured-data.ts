@@ -1,17 +1,20 @@
 export const homeStructuredData = {
   "@context": "https://schema.org",
-  "@type": ["Organization", "Manufacturer", "LocalBusiness"],
-  "name": "Vageshwari Engineering Works",
-  "url": "https://www.vagheshwariengineering.com",
-  "logo": "https://www.vagheshwariengineering.com/logo.png",
-  "description": "Leading manufacturer of hydraulic brick making machines, fly ash brick machines, automatic production lines & vibration tables in India.",
+  "@type": ["Organization", "Manufacturer", "LocalBusiness", "HardwareStore"],
+  "name": "Vagheshwari Engineering Works",
+  "alternateName": "Vagheshwari Engineering",
+  "url": "https://www.vagheshwariengineering.in",
+  "logo": "https://www.vagheshwariengineering.in/logo.png",
+  "description": "Leading bricks making machine manufacturer and engineering shop in Morbi, India. Specializing in fly-ash bricks making machines and hydraulic brick machines.",
   "foundingDate": "1995",
-  "priceRange": "$$",
+  "priceRange": "₹₹-₹₹₹₹",
   "address": {
     "@type": "PostalAddress",
+    "streetAddress": "8-A National Highway",
     "addressCountry": "IN",
     "addressRegion": "Gujarat",
-    "addressLocality": "Morbi"
+    "addressLocality": "Morbi",
+    "postalCode": "363641"
   },
   "contactPoint": {
     "@type": "ContactPoint",
@@ -20,8 +23,8 @@ export const homeStructuredData = {
     "availableLanguage": ["English", "Hindi", "Gujarati"]
   },
   "sameAs": [
-    "https://www.facebook.com/vageshwariengineering",
-    "https://www.linkedin.com/company/vageshwariengineering"
+    "https://www.facebook.com/vagheshwariengineering",
+    "https://www.linkedin.com/company/vagheshwariengineering"
   ],
   "hasOfferCatalog": {
     "@type": "OfferCatalog",

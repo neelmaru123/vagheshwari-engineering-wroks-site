@@ -10,8 +10,8 @@ const AboutSection = () => {
             About Us
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Learn about our journey to becoming a trusted manufacturer of brick
-            making machinery
+            Vagheshwari Engineering Works is a trusted engineering shop and 
+            leading manufacturer of brick making machinery in Morbi, Gujarat.
           </p>
         </div>
 
@@ -20,7 +20,7 @@ const AboutSection = () => {
             <div className="relative">
               <Image
                 src="/uploads/f11064c9-8c3f-4f37-a403-9031816d12f0.png"
-                alt="Vageshwari Engineering Works Manufacturing Facility - State-of-the-art production center for hydraulic brick making machines"
+                alt="Vagheshwari Engineering Works Manufacturing Facility - State-of-the-art production center for hydraulic brick making machines"
                 width={650}
                 height={400}
                 priority
@@ -34,7 +34,7 @@ const AboutSection = () => {
               Our Legacy of Quality and Innovation
             </h3>
             <p className="text-gray-600">
-              Established in 1995, Vageshwari Engineering Works has been at the
+              Established in 1995, Vagheshwari Engineering Works has been at the
               forefront of brick making technology for over two decades. Our
               commitment to quality, innovation, and customer satisfaction has
               made us a trusted name in the industry.

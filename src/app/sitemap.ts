@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 import { productCategories } from "./data/products-data";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://www.vagheshwariengineering.com";
+  const baseUrl = "https://www.vagheshwariengineering.in";
 
   // Static routes
   const routes: MetadataRoute.Sitemap = [

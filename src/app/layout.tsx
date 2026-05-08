@@ -10,16 +10,16 @@ export const metadata: Metadata = {
   description:
     "Leading manufacturer of bricks making machines, paver block making machines & fly ash brick machines in India. Buy automatic & manual brick machine at best price. Serving Gujarat, Maharashtra, Rajasthan & all India.",
   keywords: [
-    "bricks making machine",
-    "paver block making machine",
-    "brick machine manufacturer India",
-    "fly ash brick machine",
-    "automatic brick making machine",
+    "bricks making machine manufacturer",
+    "fly-ash bricks making machine morbi",
+    "engineering shop near me",
+    "engineering works in morbi",
+    "bricks making machine price",
+    "hydraulic brick machine manufacturer India",
+    "paver block making machine manufacturer",
+    "fly ash brick machine manufacturer",
+    "automatic brick making machine manufacturer",
     "concrete block making machine",
-    "interlocking paver block machine",
-    "brick machine price India",
-    "bricks machine manufacturer Gujarat",
-    "paver block machine manufacturer",
   ],
   authors: [{ name: "Vagheshwari Engineering Works" }],
   creator: "Vagheshwari Engineering Works",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_IN",
-    url: "https://www.vagheshwariengineering.com",
+    url: "https://www.vagheshwariengineering.in",
     siteName: "Vagheshwari Engineering Works",
     title:
       "Bricks Making Machine & Paver Block Machine Manufacturer | Vagheshwari Engineering",
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: "https://www.vagheshwariengineering.com",
+    canonical: "https://www.vagheshwariengineering.in",
   },
 };
 
@@ -73,8 +73,8 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Organization",
               name: "Vagheshwari Engineering Works",
-              url: "https://www.vagheshwariengineering.com",
-              logo: "https://www.vagheshwariengineering.com/logo.png",
+              url: "https://www.vagheshwariengineering.in",
+              logo: "https://www.vagheshwariengineering.in/logo.png",
               description:
                 "Manufacturer of bricks making machines and paver block making machines in India",
               address: {
