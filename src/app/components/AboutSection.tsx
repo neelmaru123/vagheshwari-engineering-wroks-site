@@ -10,7 +10,7 @@ const AboutSection = () => {
             About Us
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Vagheshwari Engineering Works is a trusted engineering shop and 
+            Vagheshwari Engineering Works is a trusted engineering shop and
             leading manufacturer of brick making machinery in Morbi, Gujarat.
           </p>
         </div>

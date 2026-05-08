@@ -14,10 +14,10 @@ const ProductsSection = () => {
             Hydraulic Brick Making Machines & Paver Block Making Machines
           </h2>
           <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
-            Discover our high-capacity bricks making machines, including 
-            fly-ash bricks making machines manufactured in Morbi. We provide 
-            fully automatic and semi-automatic solutions for modern brick 
-            production and construction needs.
+            Discover our high-capacity bricks making machines, including fly-ash
+            bricks making machines manufactured in Morbi. We provide fully
+            automatic and semi-automatic solutions for modern brick production
+            and construction needs.
           </p>
         </div>
 
@@ -64,7 +64,11 @@ const ProductsSection = () => {
             asChild
             className="mt-10 p-6 text-xl bg-blue-600 hover:bg-blue-700 text-white "
           >
-            <a href="/uploads/Shree%20Vagheshvaree%20Engineering%20Works.pdf" target="_blank" rel="noopener noreferrer">
+            <a
+              href="/uploads/Shree%20Vagheshvaree%20Engineering%20Works.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               View Catalogue
             </a>
           </Button>

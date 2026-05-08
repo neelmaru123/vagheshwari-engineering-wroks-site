@@ -11,13 +11,13 @@ const HeroSection = () => {
           <div className="md:w-1/2 space-y-4 md:space-y-6">
             <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight">
               Bricks Making Machine <br />
-              <span className="text-blue-600">Manufacturer in Morbi</span>
+              <span className="text-blue-600">Manufacturer</span>
             </h1>
             <p className="text-base md:text-lg lg:text-xl text-gray-600 max-w-lg">
-              Vagheshwari Engineering Works is India's leading manufacturer of 
-              fly-ash bricks making machines, hydraulic brick machines, and paver
-              block equipment. Serving Morbi and all India with high-capacity 
-              automatic production lines.
+              Vagheshwari Engineering Works is India's leading manufacturer of
+              fly-ash bricks making machines, hydraulic brick machines, and
+              paver block equipment. Serving Morbi and all India with
+              high-capacity automatic production lines.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 md:gap-4 pt-2">
               <Button
@@ -34,9 +34,7 @@ const HeroSection = () => {
                 variant="outline"
                 className="border-blue-600 text-blue-600 hover:bg-blue-50 py-4 md:py-6 px-4 md:px-6 rounded-md w-full sm:w-auto"
               >
-                <Link href="#contact">
-                  Contact Us
-                </Link>
+                <Link href="#contact">Contact Us</Link>
               </Button>
             </div>
           </div>

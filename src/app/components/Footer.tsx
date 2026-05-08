@@ -65,22 +65,34 @@ const Footer = () => {
             </h4>
             <ul className="space-y-3">
               <li>
-                <Link href="/#home" className="hover:text-white transition-colors">
+                <Link
+                  href="/#home"
+                  className="hover:text-white transition-colors"
+                >
                   Home
                 </Link>
               </li>
               <li>
-                <Link href="/#products" className="hover:text-white transition-colors">
+                <Link
+                  href="/#products"
+                  className="hover:text-white transition-colors"
+                >
                   Products
                 </Link>
               </li>
               <li>
-                <Link href="/#about" className="hover:text-white transition-colors">
+                <Link
+                  href="/#about"
+                  className="hover:text-white transition-colors"
+                >
                   About Us
                 </Link>
               </li>
               <li>
-                <Link href="/#contact" className="hover:text-white transition-colors">
+                <Link
+                  href="/#contact"
+                  className="hover:text-white transition-colors"
+                >
                   Contact
                 </Link>
               </li>
@@ -91,22 +103,34 @@ const Footer = () => {
             <h4 className="text-lg font-semibold text-white mb-4">Products</h4>
             <ul className="space-y-3">
               <li>
-                <Link href="/#products" className="hover:text-white transition-colors">
+                <Link
+                  href="/#products"
+                  className="hover:text-white transition-colors"
+                >
                   Fully Automatic Brick Making Machines
                 </Link>
               </li>
               <li>
-                <Link href="/#products" className="hover:text-white transition-colors">
+                <Link
+                  href="/#products"
+                  className="hover:text-white transition-colors"
+                >
                   Semi Automatic Brick Making Machines
                 </Link>
               </li>
               <li>
-                <Link href="/#products" className="hover:text-white transition-colors">
+                <Link
+                  href="/#products"
+                  className="hover:text-white transition-colors"
+                >
                   Claybricks Making Machines
                 </Link>
               </li>
               <li>
-                <Link href="/#products" className="hover:text-white transition-colors">
+                <Link
+                  href="/#products"
+                  className="hover:text-white transition-colors"
+                >
                   Paver Block Making Machines
                 </Link>
               </li>
