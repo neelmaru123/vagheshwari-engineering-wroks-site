@@ -14,7 +14,15 @@ const WhatsappButton = dynamic(() => import("./components/WhatsappButton").then(
 export const metadata: Metadata = {
   title: "Hydraulic Brick Making Machine Manufacturer | Vagheshwari Engineering Works",
   description: "Leading manufacturer of hydraulic brick making machines, fly ash brick machines, automatic brick making machines & vibration tables. High-quality construction equipment for efficient brick production in India.",
-  keywords: "brick making machine, hydraulic brick machine, fly ash brick machine, automatic brick production machine, vibration table, brick making equipment, concrete block machine, construction machinery",
+  keywords: [
+    "bricks making machine",
+    "paver block making machine",
+    "fly ash brick machine",
+    "hydraulic brick machine",
+    "brick making machine india",
+    "paver block machine india",
+    "construction equipment india",
+  ],
   openGraph: {
     title: "Hydraulic Brick Making Machine Manufacturer | Vagheshwari Engineering Works",
     description: "Leading manufacturer of hydraulic brick making machines, fly ash brick machines, automatic brick making machines & vibration tables. High-quality construction equipment for efficient brick production in India.",
