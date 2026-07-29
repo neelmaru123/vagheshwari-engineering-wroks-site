@@ -9,11 +9,11 @@ const HeroSection = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6 md:gap-8">
           <div className="md:w-1/2 space-y-4 md:space-y-6">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-[1.15] tracking-tight">
               Bricks Making Machine <br />
               <span className="text-blue-600">Manufacturer</span>
             </h1>
-            <p className="text-base md:text-lg lg:text-xl text-gray-600 max-w-lg">
+            <p className="text-base sm:text-lg lg:text-xl text-slate-700 leading-relaxed max-w-lg">
               Vagheshwari Engineering Works is India's leading manufacturer of
               fly-ash bricks making machines, hydraulic brick machines, and
               paver block equipment. Serving Morbi and all India with
@@ -22,17 +22,17 @@ const HeroSection = () => {
             <div className="flex flex-col sm:flex-row gap-3 md:gap-4 pt-2">
               <Button
                 asChild
-                className="bg-blue-600 hover:bg-blue-700 text-white py-4 md:py-6 px-4 md:px-6 rounded-md w-full sm:w-auto"
+                className="bg-blue-600 hover:bg-blue-700 text-white font-semibold text-base sm:text-lg py-4 md:py-6 px-5 md:px-7 rounded-md w-full sm:w-auto"
               >
                 <Link href="#products">
                   Explore Products{" "}
-                  <ArrowRight className="ml-2 h-4 w-4 md:h-5 md:w-5" />
+                  <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
               <Button
                 asChild
                 variant="outline"
-                className="border-blue-600 text-blue-600 hover:bg-blue-50 py-4 md:py-6 px-4 md:px-6 rounded-md w-full sm:w-auto"
+                className="border-blue-600 text-blue-600 hover:bg-blue-50 font-semibold text-base sm:text-lg py-4 md:py-6 px-5 md:px-7 rounded-md w-full sm:w-auto"
               >
                 <Link href="#contact">Contact Us</Link>
               </Button>
@@ -41,7 +41,7 @@ const HeroSection = () => {
           <div className="md:w-1/2 mt-6 md:mt-0">
             <div className="relative rounded-lg overflow-hidden shadow-xl">
               <Image
-                src="/uploads/IMG_20230814_213624.jpg"
+                src="/uploads/fully_automatic_machine_AI.png"
                 alt="Hydraulic brick making machine by Vageshwari Engineering Works - High capacity automatic brick production equipment"
                 width={600}
                 height={500}

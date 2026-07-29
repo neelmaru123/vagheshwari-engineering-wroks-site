@@ -76,10 +76,10 @@ const ContactSection = () => {
     <section className="py-16 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-4 tracking-tight">
             Contact Us
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-slate-700 leading-relaxed max-w-2xl mx-auto">
             Have questions about our products? Reach out to our team for
             assistance
           </p>
@@ -87,47 +87,47 @@ const ContactSection = () => {
 
         <div className="flex flex-col lg:flex-row gap-12">
           <div className="lg:w-1/2 space-y-8">
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold text-gray-900 mb-6">
+            <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+              <h3 className="text-xl font-extrabold text-slate-900 mb-6 tracking-tight">
                 Contact Information
               </h3>
 
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
-                  <div className="bg-blue-100 p-3 rounded-full">
+                  <div className="bg-blue-100 p-3 rounded-full shrink-0">
                     <Phone className="text-blue-600" size={20} />
                   </div>
                   <div>
-                    <h4 className="font-medium text-gray-800">Phone</h4>
-                    <p className="text-gray-600">+91 9879277425</p>
+                    <h4 className="font-bold text-slate-900 text-base">Phone</h4>
+                    <p className="text-slate-700 text-base font-medium">+91 9879277425</p>
                   </div>
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="bg-blue-100 p-3 rounded-full">
+                  <div className="bg-blue-100 p-3 rounded-full shrink-0">
                     <Mail className="text-blue-600" size={20} />
                   </div>
                   <div>
-                    <h4 className="font-medium text-gray-800">Email</h4>
-                    <p className="text-gray-600">vew.machines@gmail.com</p>
+                    <h4 className="font-bold text-slate-900 text-base">Email</h4>
+                    <p className="text-slate-700 text-base font-medium">vew.machines@gmail.com</p>
                   </div>
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="bg-blue-100 p-3 rounded-full">
+                  <div className="bg-blue-100 p-3 rounded-full shrink-0">
                     <MapPin className="text-blue-600" size={20} />
                   </div>
                   <div>
-                    <h4 className="font-medium text-gray-800">Address</h4>
-                    <p className="text-gray-600">2, Lati Plot, Morbi</p>
-                    <p className="text-gray-600">Gujarat - 363641, India</p>
+                    <h4 className="font-bold text-slate-900 text-base">Address</h4>
+                    <p className="text-slate-700 text-base">2, Lati Plot, Morbi</p>
+                    <p className="text-slate-700 text-base">Gujarat - 363641, India</p>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="bg-white p-6 rounded-lg shadow-md overflow-hidden">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">
+            <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100 overflow-hidden">
+              <h3 className="text-xl font-extrabold text-slate-900 mb-4 tracking-tight">
                 Factory Location
               </h3>
               <div className="aspect-[4/3] w-full">
@@ -147,26 +147,27 @@ const ContactSection = () => {
           </div>
 
           <div className="lg:w-1/2">
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold text-gray-900 mb-6">
+            <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+              <h3 className="text-xl font-extrabold text-slate-900 mb-6 tracking-tight">
                 Send Us a Message
               </h3>
 
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="space-y-2">
-                  <Label htmlFor="name">Full Name</Label>
+                  <Label htmlFor="name" className="text-sm font-semibold text-slate-800">Full Name</Label>
                   <Input
                     id="name"
                     name="name"
                     placeholder="Enter your name"
                     value={formData.name}
                     onChange={handleChange}
+                    className="text-base"
                     required
                   />
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="email">Email Address</Label>
+                  <Label htmlFor="email" className="text-sm font-semibold text-slate-800">Email Address</Label>
                   <Input
                     id="email"
                     name="email"
@@ -174,24 +175,26 @@ const ContactSection = () => {
                     placeholder="Enter your email"
                     value={formData.email}
                     onChange={handleChange}
+                    className="text-base"
                     required
                   />
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="phone">Phone Number</Label>
+                  <Label htmlFor="phone" className="text-sm font-semibold text-slate-800">Phone Number</Label>
                   <Input
                     id="phone"
                     name="phone"
                     placeholder="Enter your phone number"
                     value={formData.phone}
                     onChange={handleChange}
+                    className="text-base"
                     required
                   />
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="message">Message</Label>
+                  <Label htmlFor="message" className="text-sm font-semibold text-slate-800">Message</Label>
                   <textarea
                     id="message"
                     name="message"
@@ -200,14 +203,14 @@ const ContactSection = () => {
                     value={formData.message}
                     onChange={handleChange}
                     required
-                    className="w-full px-3 py-2 text-gray-700 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 resize-none"
+                    className="w-full px-3 py-2 text-base text-slate-800 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 resize-none"
                   ></textarea>
                 </div>
 
                 <Button
                   type="submit"
                   disabled={loading}
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-md"
+                  className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold text-base py-3 rounded-md shadow"
                 >
                   {loading ? "Sending..." : "Send Message"}
                 </Button>

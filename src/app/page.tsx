@@ -1,8 +1,8 @@
 import { Metadata } from "next";
 import dynamic from "next/dynamic";
+import SchemaMarkup from "@/components/SchemaMarkup";
 import HeroSection from "./components/HeroSection";
 import Navbar from "./components/Navbar";
-import { homeStructuredData } from "./data/structured-data";
 
 // Dynamically import below-the-fold components
 const ProductsSection = dynamic(() => import("./components/ProductsSection"), { ssr: true });
@@ -40,10 +40,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <div className="min-h-screen w-full flex flex-col bg-background overflow-x-hidden">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(homeStructuredData) }}
-      />
+      <SchemaMarkup pageType="home" />
       <Navbar />
 
       <main className="flex-grow pt-8">

@@ -1,4 +1,3 @@
-
 export const productCategories = [
   {
     id: "1",
@@ -19,7 +18,7 @@ export const productCategories = [
     ],
 
     images: [
-      "/uploads/IMG_20230814_213624.jpg",
+      "/uploads/fully_automatic_machine_AI.png",
       "/uploads/3Dmodels/fully_automatic_machine.png",
       "/uploads/Fully-Automatic-Fly-Ash-Brick-Making-Machine.webp",
       "/uploads/937ba39a-07c1-4f4a-9406-12c9f61034cd.png",
@@ -43,7 +42,7 @@ export const productCategories = [
     ],
 
     images: [
-      "/uploads/e98c1cea-6f85-4212-89e3-b921654f6de3.png",
+      "/uploads/Gemini_Generated_Image_g4oh20g4oh20g4oh.png",
       "/uploads/automatic-fly-ash-bricks-machine-722.webp",
     ],
   },
@@ -62,7 +61,7 @@ export const productCategories = [
       "Fast cycle time 12–15 sec",
     ],
 
-    images: ["/uploads/clay_bricks.png"],
+    images: ["/uploads/Gemini_Generated_Image_uk1bzmuk1bzmuk1b.png"],
   },
   {
     id: "6",
@@ -92,6 +91,7 @@ export const productCategories = [
       },
     ],
     images: [
+      "/uploads/Gemini_Generated_Image_g8dnd3g8dnd3g8dn.png",
       "/uploads/concrete-vibrator-table-500x500.webp",
       "/uploads/85c9a281-beb6-49b1-bd1a-c4fa90f2dbd1.png",
     ],

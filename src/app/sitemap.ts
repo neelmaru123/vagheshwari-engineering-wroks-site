@@ -4,17 +4,13 @@ import { productCategories } from "./data/products-data";
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://www.vagheshwariengineering.in";
 
-  // Static routes
-  const routes: MetadataRoute.Sitemap = [
-    {
-      url: baseUrl,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 1,
-    },
-  ];
+  const homeRoute: MetadataRoute.Sitemap[number] = {
+    url: `${baseUrl}/`,
+    lastModified: new Date(),
+    changeFrequency: "weekly",
+    priority: 1.0,
+  };
 
-  // Dynamic routes (products)
   const productRoutes: MetadataRoute.Sitemap = productCategories.map(
     (product) => ({
       url: `${baseUrl}/product/${product.id}`,
@@ -24,5 +20,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })
   );
 
-  return [...routes, ...productRoutes];
+  return [homeRoute, ...productRoutes];
 }

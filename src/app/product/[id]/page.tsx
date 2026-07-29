@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Metadata } from "next";
 import { productCategories } from "../../data/products-data";
 import ProductDetailsClient from "./ProductDetailsClient";
-import { SeoHead } from "../../components/SeoHead";
+import SchemaMarkup from "@/components/SchemaMarkup";
 
 export async function generateStaticParams() {
   return productCategories.map((product: any) => ({ id: product.id }));
@@ -56,12 +56,6 @@ export default async function ProductPage({
   const { id } = await params;
   const product = productCategories.find((p: any) => p.id === id);
 
-  // Build SEO variables for this product
-  const title = `${product?.name ?? ''} Manufacturer in India | Vagheshwari Engineering Works`;
-  const description = `${product?.name ?? ''} manufacturer and supplier. High-quality bricks making machine for fly ash bricks, clay bricks, and paver blocks in Morbi, Gujarat, India.`;
-  const ogImage = product?.images?.[0] ?? "/uploads/logo.png";
-  const keywords = `${product?.name ?? ''}, bricks making machine, paver block making machine, bricks making machine manufacturer, fly-ash bricks making machine morbi, hydraulic brick machine, construction equipment manufacturer, ${product?.category ?? ''}, Vagheshwari Engineering, India`;
-  const canonical = `https://www.vagheshwariengineering.in/product/${product?.id}`;
   if (!product) {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center px-4">
@@ -149,25 +143,30 @@ export default async function ProductPage({
     ],
   };
 
-  const meta = { title: title, description: description, keywords: keywords, canonical: canonical, ogImage: ogImage, structuredData: productStructuredData };
   return (
-    <>
-      <SeoHead {...meta} />
-      <div className="min-h-screen w-full flex flex-col bg-background overflow-x-hidden">
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(productStructuredData),
-          }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(breadcrumbStructuredData),
-          }}
-        />
-        <ProductDetailsClient product={product} />
-      </div>
-    </>
+    <div className="min-h-screen w-full flex flex-col bg-background overflow-x-hidden">
+      <SchemaMarkup
+        pageType="product"
+        data={{
+          name: product.name,
+          image: product.images?.[0] ?? "/uploads/logo.png",
+          description: product.longDescription ?? product.description,
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(productStructuredData),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbStructuredData),
+        }}
+      />
+      <ProductDetailsClient product={product} />
+    </div>
   );
 }
+

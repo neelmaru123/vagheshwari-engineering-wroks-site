@@ -1,25 +1,33 @@
 import type { Metadata } from "next";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./providers";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
+const plusJakartaSans = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  variable: "--font-sans",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
   title:
-    "Vagheshwari Engineering Works | Bricks Making Machine Manufacturer in India",
+    "Hydraulic Brick Making Machine Manufacturer in Morbi | Vagheshwari Engineering",
   description:
-    "Leading manufacturer of bricks making machines, paver block making machines & fly ash brick machines in India. Buy automatic & manual brick machine at best price. Serving Gujarat, Maharashtra, Rajasthan & all India.",
+    "Leading manufacturer of hydraulic brick making machine in Morbi, Gujarat. High quality fly ash brick machine, automatic block making machine India, and paver block machinery at best prices.",
   keywords: [
-    "bricks making machine manufacturer",
-    "fly-ash bricks making machine morbi",
-    "engineering shop near me",
-    "engineering works in morbi",
-    "bricks making machine price",
-    "hydraulic brick machine manufacturer India",
+    "hydraulic brick making machine manufacturer morbi",
+    "fly ash brick machine",
+    "automatic block making machine India",
+    "brick making machine manufacturer in morbi",
+    "fly ash brick machine manufacturer Gujarat",
+    "automatic fly ash brick machine price",
     "paver block making machine manufacturer",
-    "fly ash brick machine manufacturer",
-    "automatic brick making machine manufacturer",
-    "concrete block making machine",
+    "concrete block machine supplier Morbi",
+    "buy brick making machine India",
+    "hydraulic brick press machine",
+    "Vagheshwari Engineering Works",
   ],
   authors: [{ name: "Vagheshwari Engineering Works" }],
   creator: "Vagheshwari Engineering Works",
@@ -27,20 +35,19 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
-    googleBot: { index: true, follow: true },
   },
   openGraph: {
     type: "website",
     locale: "en_IN",
-    url: "https://www.vagheshwariengineering.in",
+    url: "https://www.vagheshwariengineering.in/",
     siteName: "Vagheshwari Engineering Works",
     title:
-      "Bricks Making Machine & Paver Block Machine Manufacturer | Vagheshwari Engineering",
+      "Hydraulic Brick Making Machine Manufacturer in Morbi | Vagheshwari Engineering",
     description:
-      "Top manufacturer of bricks & paver block making machines in India. Durable, affordable, high-capacity machines for all block types.",
+      "Leading manufacturer of hydraulic brick making machine in Morbi, Gujarat. High quality fly ash brick machine, automatic block making machine India, and paver block machinery at best prices.",
     images: [
       {
-        url: "/og-image.jpg", // Add a real product photo (1200x630px)
+        url: "/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Vagheshwari Engineering - Brick Making Machine",
@@ -48,7 +55,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: "https://www.vagheshwariengineering.in",
+    canonical: "https://www.vagheshwariengineering.in/",
   },
 };
 
@@ -64,8 +71,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`antialiased`}>
+    <html lang="en" className={plusJakartaSans.variable}>
+      <body className={`${plusJakartaSans.className} antialiased text-slate-900 bg-background font-sans`}>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

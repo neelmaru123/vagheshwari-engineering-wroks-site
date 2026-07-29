@@ -53,11 +53,10 @@ const Navbar = ({ isProduct }: NavbarProps = {}) => {
 
   return (
     <header
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled || isProduct
-          ? "bg-white shadow-md py-2"
-          : "bg-blue-50 py-2 md:py-4"
-      }`}
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled || isProduct
+        ? "bg-white shadow-md py-2"
+        : "bg-blue-50 py-2 md:py-4"
+        }`}
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
         <div className="flex items-center">
@@ -78,9 +77,8 @@ const Navbar = ({ isProduct }: NavbarProps = {}) => {
               <button
                 key={link.id}
                 onClick={() => handleNavClick(link.id)}
-                className={`transition-colors hover:text-blue-600 font-medium text-lg ${
-                  activeSection === link.id ? "text-blue-600" : "text-gray-700"
-                }`}
+                className={`transition-colors hover:text-blue-600 font-medium text-lg ${activeSection === link.id ? "text-blue-600" : "text-gray-700"
+                  }`}
               >
                 {link.name}
               </button>
@@ -108,9 +106,8 @@ const Navbar = ({ isProduct }: NavbarProps = {}) => {
               <button
                 key={link.id}
                 onClick={() => handleNavClick(link.id)}
-                className={`font-medium transition-colors p-2 hover:bg-gray-100 rounded ${
-                  activeSection === link.id ? "text-blue-600" : "text-gray-700"
-                }`}
+                className={`font-medium transition-colors p-2 hover:bg-gray-100 rounded ${activeSection === link.id ? "text-blue-600" : "text-gray-700"
+                  }`}
               >
                 {link.name}
               </button>

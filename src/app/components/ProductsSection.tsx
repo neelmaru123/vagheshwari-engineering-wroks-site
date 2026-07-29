@@ -10,10 +10,10 @@ const ProductsSection = () => {
     <section className="py-12 md:py-16 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-8 md:mb-12">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 mb-4 tracking-tight">
             Hydraulic Brick Making Machines & Paver Block Making Machines
           </h2>
-          <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-slate-700 leading-relaxed max-w-2xl mx-auto">
             Discover our high-capacity bricks making machines, including fly-ash
             bricks making machines manufactured in Morbi. We provide fully
             automatic and semi-automatic solutions for modern brick production
@@ -25,7 +25,7 @@ const ProductsSection = () => {
           {productCategories.map((category: any) => (
             <article key={category.id} className="">
               <Card className="shadow-md hover:shadow-lg transition-shadow overflow-hidden h-full">
-                <CardContent className="p-0">
+                <CardContent className="p-0 flex flex-col h-full">
                   <AspectRatio ratio={4 / 3} className="relative bg-gray-100">
                     <Image
                       src={category.images?.[0] ?? "/uploads/logo.png"}
@@ -39,16 +39,18 @@ const ProductsSection = () => {
                       }`}
                     />
                   </AspectRatio>
-                  <div className="p-4 md:p-6">
-                    <h3 className="text-lg md:text-xl font-semibold text-gray-900 mb-1 md:mb-2">
-                      {category.name}
-                    </h3>
-                    <p className="text-sm md:text-base text-gray-600 mb-2 md:mb-3">
-                      {category.description}
-                    </p>
+                  <div className="p-5 md:p-6 flex flex-col flex-grow justify-between">
+                    <div>
+                      <h3 className="text-lg md:text-xl font-bold text-slate-900 mb-2 leading-snug">
+                        {category.name}
+                      </h3>
+                      <p className="text-sm sm:text-base text-slate-600 mb-4 leading-relaxed">
+                        {category.description}
+                      </p>
+                    </div>
 
-                    <Link href={`/product/${category.id}`}>
-                      <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white">
+                    <Link href={`/product/${category.id}`} className="mt-auto block">
+                      <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold text-base py-2.5">
                         View Details
                       </Button>
                     </Link>
@@ -62,7 +64,7 @@ const ProductsSection = () => {
         <div className="flex justify-center items-center">
           <Button
             asChild
-            className="mt-10 p-6 text-xl bg-blue-600 hover:bg-blue-700 text-white "
+            className="mt-10 py-4 px-8 text-lg font-semibold bg-blue-600 hover:bg-blue-700 text-white rounded-md shadow-md"
           >
             <a
               href="/uploads/Shree%20Vagheshvaree%20Engineering%20Works.pdf"
